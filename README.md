@@ -21,6 +21,7 @@ The Mend Renovate App must be installed on this repository as well as on the rep
 - Vulnerability fixes skip the waiting period when GitHub Dependabot alerts are enabled on the repository. OSV is checked as well (direct dependencies only).
 - Lock file maintenance runs every Monday before 9am JST and is automerged. Note that `minimumReleaseAge` does not apply to it.
 - Go modules are tidied after updates.
+- Python runtime minor/major updates (`requires-python`, `.python-version`, the `python` Docker image) are grouped into one "python runtime" PR, opened only after approval on the Dependency Dashboard and never automerged. Otherwise a bump can land in the non-major group for only some of these files and break the lock file update.
 
 ## Overrides
 

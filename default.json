@@ -11,5 +11,15 @@
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": { "prConcurrentLimit": 5 },
   "lockFileMaintenance": { "enabled": true, "schedule": ["before 9am on monday"] },
-  "postUpdateOptions": ["gomodTidy"]
+  "postUpdateOptions": ["gomodTidy"],
+  "packageRules": [
+    {
+      "description": "Python runtime (requires-python, .python-version, python Docker image) moves as one PR, only on approval",
+      "matchDepNames": ["python"],
+      "matchUpdateTypes": ["minor", "major"],
+      "groupName": "python runtime",
+      "automerge": false,
+      "dependencyDashboardApproval": true
+    }
+  ]
 }
