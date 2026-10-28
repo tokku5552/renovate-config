@@ -4,6 +4,7 @@
   "timezone": "Asia/Tokyo",
   "assignees": ["tokku5552"],
   "automerge": true,
+  "platformAutomerge": false,
   "minimumReleaseAge": "7 days",
   "internalChecksFilter": "strict",
   "prConcurrentLimit": 5,
