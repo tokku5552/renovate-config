@@ -12,7 +12,8 @@
   "major": { "automerge": false, "dependencyDashboardApproval": true },
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": { "prConcurrentLimit": 5 },
-  "lockFileMaintenance": { "enabled": false },
+  "lockFileMaintenance": { "enabled": false, "minimumReleaseAge": null },
+  "digest": { "minimumReleaseAge": null },
   "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
